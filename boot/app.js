@@ -43,11 +43,15 @@
          e.preventDefault();
      });
 
-     jQuery('body').on('mousemove', function(e) {
+     jQuery('body').not('.lnr').on('mousemove', function(e) {
          $(this).find('.selectedDiv').removeClass('selectedDiv');
          e.preventDefault();
          // console.log(e.target);
          $(e.target).addClass('selectedDiv');
+     });
+
+     jQuery('#leftMenu').on('mousemove', function(e) {
+        e.preventDefault();
      });
 
      jQuery('body').on('dblclick', function(e) {
@@ -120,9 +124,6 @@
          $body.css('width', '320px');
          $(this).addClass('active');
 
-         //set selected screen
-         window.selectedScreen = "col-xs-";
-         prop.screenSize = "col-xs-";
 
          //show mode on right of the screen
          $('.rightboxText').text('X-Small Screen');
@@ -138,6 +139,10 @@
          $('.menuLi').find('.active').removeClass('active');
          $body.css('width', '768px');
          $(this).addClass('active');
+
+         window.resizeTo(768,30);     
+         window.focus();                          
+ 
 
          //set selected screen
          window.selectedScreen = "col-sm-";
@@ -189,6 +194,32 @@
 
      });
 
+     
+    var divs = [];
+    function log(classVal){
+         if(selectedBox.context.id) 
+         {
+            // screen = {findBy: "id" ,  key:selectedBox.context.id , val:classVal , tagname: selectedBox.context.tagName };
+             divs.push({
+                screenSize: screen,
+                findBy: "id", 
+                key: selectedBox.context.id,
+                val: classVal,
+                tagname: selectedBox.context.tagName
+             });
+         }
+         else
+         {
+            // screen = {findBy: "class" ,  key:selectedBox.context.classList[0] , val:classVal , tagname: selectedBox.context.tagName};
+            divs.push({
+                screenSize: screen,
+                findBy: "id", 
+                key: selectedBox.context.classList[0],
+                val: classVal,
+                tagname: selectedBox.context.tagName
+            });
+         }
+    }
 
      //*********boxex
      //size
@@ -202,10 +233,6 @@
          //get the range valur
          // console.log(prop);
          if (typeof(selectedScreen) != "undefined" && selectedScreen !== null) {
-             // console.log(rangeVal);
-             // if(selectedBox.hasClass('[class^="c"]')){
-             //   console.log("yes");
-               // selectedBox.removeClass('[class^="col"]');
                
                console.log($selectedScreen);
                if($selectedScreen == "col-xs-"){
@@ -229,13 +256,13 @@
                    });
                }
 
-               // selectedBox.addClass(classWidth);
-             // }else{
              var classWidth = selectedScreen + rangeVal;
              selectedBox.addClass(classWidth);
-             // }
+ 
          }
-         // console.log(selectedBox);
+
+         log(classWidth);
+         
      });
      
      //position
@@ -245,7 +272,7 @@
          selectedBox.addClass('pull-left');
          
          divClass = selectedBox.attr('class');
-         screen = { screenSize:screen.width ,  keyPos:divClass , valPos:"pull-left" };
+         log("pull-left");
 
      });
 
@@ -254,7 +281,7 @@
          selectedBox.addClass('pull-right');
 
          divClass = selectedBox.attr('class');
-         screen = { keyPos:divClass , valPos:"pull-right" };
+         log("pull-RIGHT");
      });
 
 
@@ -277,27 +304,17 @@
          screen = { keyOffset:divClass , valPos:"col-sm-offset-1" };
 
      });
-     
 
-     // $('.posOffsetRight').on('click', function(event) {
-     //     // if(selectedBox.hasClass('col-sm-offset-')) {selectedBox.removeClass('pull-right');} 
-     //     classoffsetNum = selectedBox.attr('class');
-     //     if (classoffsetNum.indexOf("offset") >= 0)
-     //     {
-     //        classoffsetNum:contains('offset').remove();
-     //        console.log("true");
-     //     }
-
-     //     selectedBox.addClass('col-sm-offset-1');
+     //visabilitty
+     $('.lnr-eye').on('click', function(event) {
          
-     //     divClass = selectedBox.attr('class');
-     //     screen = { keyOffset:divClass , valPos:"col-sm-offset-1" };
+         var divhidden = ('hidden-'+screen.width);
+         selectedBox.addClass(divhidden);
+         log(divhidden);
 
-     // });
+     });
 
 
-    
-    
     // images
     $(".imageEffect").on('click', function(event) {
         // $(this).find('.activeImage').removeClass('activeImage');
@@ -349,12 +366,6 @@
     $(".menuTextSize").on('click', ".fontSize" , function(e) {
         $element = $(e.target);
         $fontSize = $element.val();
-         
-        // console.log($fontSize);
-        
-        // if(selectedBox.hasClass('text-lowercase')) {selectedBox.removeClass('text-lowercase');}
-        // if(selectedBox.hasClass('text-uppercase')) {selectedBox.removeClass('text-uppercase');}
-        // selectedBox.css("font-size" , $fontSize + "!important" );
         selectedBox.css('font-size', $fontSize +"px");
         
     });
@@ -385,9 +396,12 @@
 
     $('body').on('click', function(event) {
 
-        console.log(screen);
+        console.log(divs);
     });
-    
+
+
+
+        
 
 
  });
