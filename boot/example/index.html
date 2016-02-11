@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>B-responsive: example </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+
+	<style>
+
+	body {
+	    font-family: inherit;
+	}
+    
+	html {
+	  font-family: sans-serif;
+	  -ms-text-size-adjust: 100%;
+	  -webkit-text-size-adjust: 100%;
+	}
+	body, h2 , p , ul , h1{
+	  margin: 0;
+	}
+	article,
+	aside,
+	details,
+	figcaption,
+	figure,
+	footer,
+	header,
+	hgroup,
+	main,
+	menu,
+	nav,
+	section,
+	summary {
+	  display: block;
+	}
+
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+    }
+	.headerRed {
+	    height: 400px;
+	    background: #D92832;
+	}
+
+	.headerBlack {
+	    height: 400px;
+	    background: #000;
+	}
+
+	.navbar-top {
+	    background: #000;
+	    color: #fff;
+	}
+
+	.navbar-top-container{
+	    background:#000!important;
+	    height:40px;
+	    margin: 0 auto;
+	}
+
+	.navbar-top-container ul {
+	    margin: 0 auto;
+	    list-style: none;
+	}
+
+	.navbar-top-container li {
+	    float: left;
+        padding: 10px 20px;
+	}
+ 
+    .red{color:red; padding: 0px 10px;}
+    .redno{color: red;
+    padding: 20px 0px 0px 0px;}
+
+    li.details {
+	    font-weight: bold;
+	    letter-spacing: 1.3px;
+	}
+	 
+	li.search-container {
+	    float: right;
+	}
+
+	input.search {
+	        padding: 0px 5px;
+		    font-size: 13px;
+		    background: none;
+		    border: none;
+	}
+
+	nav.navbar-headerRed ul {
+	    list-style: none;
+	}
+
+	nav.navbar-headerRed {
+	    padding: 20px;
+	}
+
+	ul.logo-container {
+	    width: 480px;
+        float: left;
+        padding: 0px!important;
+	}
+
+	.navbar-headerRed li {
+	    float: left;
+	    padding: 20px 21px;
+	    font-weight: bold;
+	    line-height: 30px;
+	}
+
+	h1.logo {
+	    color: #fff;
+	    font-size: 45px;
+	}
+
+	.logo-container p {
+	    font-size: 18px;
+	}
+
+	.headerdescription {
+	    color: #fff;
+	}
+
+	.header-title {
+	    width: 700px;
+	    float: left;
+	}
+
+	.headerdescription.container {
+	    padding: 185px 0px 0px 20px;
+	}
+
+	.header-title p {
+	    color: #656565;
+	    padding: 20px 0px;
+	}
+
+	.call {
+	    background: #D92832;
+	    border: none;
+	    width: 130px;
+	    height: 38px;
+	    border-radius: 20px;
+	    color: #000;
+	    margin: 20px 5px 0px 175px;
+	    font-size: 14px;
+	    font-family: cursive;
+	}
+
+	.left{float:left;}
+	.headerBotton {
+	    color: #fff;
+	}
+
+	.break {
+	    background: #CCCCC8;
+	    height: 12px;
+	}
+
+	.main-content {
+	    height: 500px;
+	}
+
+	.footer-main {
+	    height: 550px;
+	    background: #1E1E1E;
+	}
+
+	.footer-bottom {
+	    height: 70px;
+	    background: #000;
+	}
+
+	.single {
+	    width: 345px;
+	    float: left;
+	    padding: 25px;
+	}
+	.singles {
+	    width: 345px;
+	    float: left;
+	    color: #CCCCC8;
+	}
+
+	.first.singles {
+	    padding: 0px 0px 0px 22px;
+	}
+    
+    .footer-bottom-main {
+	    padding: 5px;
+	    font-size: 13px;
+	    line-height: 5;
+	}
+    img.product-image {
+	    width: 100%;
+        height: 130px;
+	}
+
+	.single p {
+	    color: #656565;
+	    padding: 20px 0px;
+	    line-height: 1.5;
+	}
+	.navbar-bottom {
+	    background: none!important;
+	    color: #fff;
+	}
+
+	.navbar-bottom li.details {
+	    padding: 0px;
+	}
+
+	img.map {
+	    width: 310px;
+	    height: 260px;
+	    border: 4px solid #Fff;
+	}
+	.icon{
+		color: #2F2F2F;
+	    background: #CCCCC8;
+	    border-radius: 45px;
+	    height: 26px;
+	    width: 20px;
+	    padding: 0px 0px 0px 6px;
+	    line-height: 1.6;
+	    margin-right: 10px;
+	}
+	.red-text{
+		color:red;
+	}
+
+	.footer-main p {
+	    color: #CCCCC8;
+	}
+
+	.contact input {
+	    background: black;
+	    border: none;
+	    float: left;
+	    padding: 20px;
+	    border-radius: 7px;
+	    margin: 5px 0px;
+	    width: 298px;
+	}
+
+	.contact {
+	    padding: 20px 0px;
+	}
+
+	textarea {
+	    background: black;
+	    border: none;
+	    float: left;
+	    padding: 20px;
+	    border-radius: 7px;
+	    margin: 5px 0px;
+	    width: 298px;
+	    height: 126px;
+	}
+
+
+	#social-container {
+	  text-align: center;
+	  width: 100%;
+	}
+
+	#social-container .row .col-xs-2 .icon {
+	  background-color: #fff;
+	  border: 6px solid #aaa;
+	  color: #aaa;
+	  font-size: 38px;
+	  line-height: 52px;
+	  overflow: visible;
+	  text-shadow: none;
+	}
+
+	#social-container .row .col-xs-2 .icon {
+	  background-color: #fff;
+	  border: 5px solid #aaa;
+	  color: #aaa;
+	  font-size: 36px;
+	  line-height: 50px;
+	}
+
+	#social-container .eclipse {
+	  border-radius: 50px;
+	  height: 63px;
+	}
+
+	#social-container {
+	    margin: 0;
+	    padding: 0px 90px;
+	}
+
+	#social-container .icon {
+	    color: #BBCCC8;
+	    float: left;
+	    font-family: 'FontAwesome';
+	    font-size: 25px;
+	    height: 40px;
+	    line-height: 41px;
+	    margin: 10px 10px 10px 10px;
+	    overflow: hidden;
+	    position: relative;
+	    text-align: center;
+	    text-align: center;
+	    width: 40px;
+	    background: black;
+	    border: 1px solid #BBCCC8;
+	}
+
+    ul.details-footer-main {
+	    list-style: none;
+	}
+
+	li.details-footer {
+	    float: left;
+	    padding: 0px 10px;
+	}
+
+	/*slider*/
+		/** ---------------------------------------
+	 * Slider 
+	 ----------------------------------------*/
+	.container-slider {
+	    width: 1168px;
+	    margin: 0 auto;
+	}
+
+	.slider-wrapper {
+	    z-index: 500;
+	    position: relative;
+	    width: 100%;
+	    height: 360px;
+	    background: #FFF;
+	    border: 1px solid #FCFFFF;
+	    overflow: hidden;
+	    padding: 0px;
+	}
+
+	.slider-wrapper li {
+		display: none;
+	}
+
+	.slider-wrapper .current-slide {
+		display: block;
+	}
+
+	.slider-shadow {
+		width: 100%;
+		height: 15px;
+		position: relative;
+	}
+
+	.slider-shadow:after, .slider-shadow:before {
+		content: '';
+		position: absolute;
+		background: #171c24;
+		height: 100%;
+		width: 50%;
+		left: 10px;
+		top: -20px;
+		-webkit-transform: rotate(-4deg);
+		-ms-transform: rotate(-4deg);
+		-o-transform: rotate(-4deg);
+		transform: rotate(-4deg);
+		-webkit-box-shadow: 0 0 15px 8px #171c24;
+		box-shadow: 0 0 15px 8px #171c24;
+	}
+
+	.slider-shadow:before {
+		right: 10px;
+		left: auto;
+		-webkit-transform: rotate(4deg);
+		-ms-transform: rotate(4deg);
+		-o-transform: rotate(4deg);
+		transform: rotate(4deg);
+	}
+
+	.slider-wrapper img {
+	    position: absolute;
+	    width: 100%;
+	    top: 0;
+	    left: 0;
+	}
+
+	/**
+	 * ---[Caption] ---------------------- 
+	 **/
+	.slider-wrapper .caption {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.65);
+		width: 100%;
+		padding: 10px;
+		color: #FFF;
+		-webkit-transform: translateY(100%);
+		-ms-transform: translateY(100%);
+		-o-transform: translateY(100%);
+		transform: translateY(100%);
+		opacity: 0;
+		-webkit-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+	}
+
+	.slider-wrapper li:hover .caption {
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+
+	.slider-wrapper h2 {
+		color: #00c5b9;
+		font-size: 1em;
+		font-weight: 400;
+		margin-bottom: 6px;
+	}
+
+	.slider-wrapper p {
+		font-size: 0.9em;
+		font-weight: 300;
+		line-height: 1.4em;
+	}
+
+	/**
+	 * ---[Botones-Control] ---------------------- 
+	 **/
+	.control-buttons {
+		margin-top: 15px;
+		text-align: center;
+	}
+
+	.control-buttons li {
+		cursor: pointer;
+		display: inline-block;
+		background: #424f66;
+		text-indent: -99999px;
+		height: 12px;
+		width: 12px;
+		margin: 0 6px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+	}
+
+	.control-buttons li.active {
+        background: #D92832;
+	}
+
+	.authors {
+		text-align: center;
+		color: #7a8699;
+		display: block;
+		font-size: 1.6em;
+		font-weight: 300;
+		margin-top: 80px;
+		font-size: 300;
+	}
+    
+    .no-padding-top{padding-top:0px!important}
+	/** ---------------------------------------
+	 * Responsive 
+	 ----------------------------------------*/
+	 @media only screen and (max-width: 825px) {
+	 	.container {
+	 		width: 500px;
+	 	}
+
+	 	.slider-wrapper {
+	 		height: 260px;
+	 	}
+	 }
+
+	 @media only screen and (max-width: 535px) {
+	 	.container {
+	 		padding: 5px;
+	 		width: 100%;
+	 		margin: 40px 0 0 0;
+	 	}
+
+	 	.slider-wrapper {
+	 		height: 200px;
+	 	}
+		
+	 	.slider-wrapper .caption {
+	 		display: none;
+	 	}
+
+	 }
+
+	 @media only screen and (max-width: 410px) {
+	 	.slider-wrapper {
+	 		height: 160px;
+	 	}
+	 }
+	</style>
+</head>
+<body>
+
+	<header id="header" class="">
+		
+		<div class="navbar-top">
+            <div class="navbar-top-container container">
+            	<ul>
+	            	<li class="details"><i class="fa fa-home red"></i>Global _Md 44051</li>
+	            	<li class="details"><i class="fa fa-phone red"></i>(1)129 454 4555</li>
+	            	<li class="details"><i class="fa fa-globe red"></i>national@gmail.com</li>
+	            </ul>
+
+	             <ul>
+	            	<li class="search-container">
+	            		<input type="search" class="search" placeholder="Enter terms to search in this box"></input>
+	            	    <i class="fa fa-search red"></i>
+	                </li> 	
+	            </ul>
+            </div>
+            
+		</div>
+
+	    <div class="headerRed ">
+	    	<nav class="navbar-headerRed container">
+	            <ul class="logo-container">
+	            	<li>
+	            		<h1 class="logo">SuccessInc.</h1>
+	            		<p>Your awesome slogan goes here</p>
+	            	</li> 	
+	            </ul >
+
+	            <ul class="header-menu">
+	            	<li>Pruducts <i class="fa fa-caret-down"></i></li>
+	            	<li>Services <i class="fa fa-caret-down"></i></li>
+	            	<li>Showcase <i class="fa fa-caret-down"></i></li>
+	            	<li>About us <i class="fa fa-caret-down"></i></li>
+	            	<li>Blog     <i class="fa fa-caret-down"></i></li>
+	            	<li>Contact  <i class="fa fa-caret-down"></i></li>
+	            </ul>    
+			</nav>
+
+
+			
+			<!-- ==================================== 
+			Contenedor Slider 
+			=======================================-->
+			<section id="slider" class="container-slider">
+				<ul class="slider-wrapper">
+				<li class="current-slide">
+					<img src="http://i9.photobucket.com/albums/a88/creaticode/1_zpsc6871490.jpg" title="" alt="">
+
+					<div class="caption">
+						<h2 class="slider-title">Diseño web</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, placeat est. Alias illo hic quo nobis, aspernatur iste ut voluptate.</p>
+					</div>
+				</li>
+
+				<li>
+					<img src="http://i9.photobucket.com/albums/a88/creaticode/2_zps6ccd36bd.jpg" title="" alt="">
+
+					<div class="caption">
+						<h2 class="slider-title">Diseño Responsive</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo iusto placeat aliquid tempore harum, similique!</p>
+					</div>
+				</li>
+
+				<li>
+					<img src="http://i9.photobucket.com/albums/a88/creaticode/4_zps611bc9f9.jpg" title="" alt="">
+
+					<div class="caption">
+						<h2 class="slider-title">Identidad Corporativa</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dicta laudantium voluptatem minima! Dolorum tempore dolores excepturi omnis provident. Commodi quis aperiam maiores, dolore a perferendis!</p>
+					</div>
+				</li>
+
+				<li>
+					<img src="http://i9.photobucket.com/albums/a88/creaticode/3_zps70e4fcc5.jpg" title="" alt="">
+
+					<div class="caption">
+						<h2 class="slider-title">Desarrollo Web</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolore dignissimos laudantium.</p>
+					</div>
+				</li>
+				</ul>
+				<!-- Sombras -->
+				<div class="slider-shadow"></div>
+				
+				<!-- Controles de Navegacion -->
+				<ul id="control-buttons" class="control-buttons"></ul>
+			</section>
+			
+			
+		
+
+	    </div>
+        
+
+        <div class="headerBlack">
+	          <div class="container headerBlack-main">
+		          <div class="headerdescription container">
+		          	  <div class="header-title">
+			          	  <h2>Title goes here</h2>
+			          	  <p>Suspendisse porttitor felis ac tempus gravida. Donec lacinia leo augue, adipiscing dapibus neque consequat ut. Ut et tellus ullamcorper, consectetur tellus eu, dapibus erat.</p>
+			          </div>
+		          </div>
+
+		          <div class="headerBotton left"> 
+		          	  <button type="button" class="call left">Call to action</button>
+		          </div>
+	          </div>
+	    </div>
+
+	</header>
+	<!-- /header -->
+	
+     <div class="break"></div>
+     <div class="main-content">
+     	<div class="products container">
+     	  <div class="first single">
+     	  	  <h3>First Product</h3>
+	     	  <img class="product-image" src="images/2.png"></img>
+	     	  <h2 class="redno">Product description</h2>
+	     	  <p>Suspendisse porttitor felis ac tempus gravida. Donec lacinia leo augue, adipiscing dapibus neque consequat ut. Ut et tellus ullamcorper, consectetur tellus eu, dapibus erat.</p>
+	     	  <div class="headerBotton left"> 
+	          	  <button type="button" class="call left">Call to action</button>
+	          </div>
+
+     	  </div>
+
+     	  <div class="secound single">
+     	  	  <h3>First Product</h3>
+	     	  <img class="product-image" src="images/1.png"></img>
+	     	  <h2 class="redno">Product description</h2>
+	     	  <p>Suspendisse porttitor felis ac tempus gravida. Donec lacinia leo augue, adipiscing dapibus neque consequat ut. Ut et tellus ullamcorper, consectetur tellus eu, dapibus erat.</p>
+	     	  <div class="headerBotton left"> 
+	          	  <button type="button" class="call left">Call to action</button>
+	          </div>
+     	  </div>
+
+     	  <div class="third single">
+     	  	  <h3>First Product</h3>
+	     	  <img class="product-image" src="images/3.png"></img>
+	     	  <h2 class="redno">Product description</h2>
+	     	  <p>Suspendisse porttitor felis ac tempus gravida. Donec lacinia leo augue, adipiscing dapibus neque consequat ut. Ut et tellus ullamcorper, consectetur tellus eu, dapibus erat.</p>
+	     	  <div class="headerBotton left"> 
+	          	  <button type="button" class="call left">Call to action</button>
+	          </div>
+     	  </div>
+     	</div>
+     </div>
+ 	
+ 	<div class="footer-main">
+	        <div class="navbar-top-container navbar-bottom container">
+	              <div class="first single">
+			     	  	 <i class="fa fa-home icon"></i>Where to find us
+		     	  </div>
+
+		     	  <div class="secound single">
+		     	  	     <i class="fa fa-phone icon"></i>Latest from twitter
+		     	  </div>
+
+		     	  <div class="third single">
+		     	  	     <i class="fa fa-globe icon"></i>Contect us
+		     	  </div>
+            </div>
+
+
+            <div class="products container footer-main">
+		     	  <div class="first single no-padding-top">
+		     	  	  <p>Suspendisse porttitor felis ac tempus gravida. Donec lacinia leo augue, adipiscing dapibus neque consequat u</p>
+		     	  	  <img class="map" src="images/map.jpg"></img>
+		     	  </div>
+ 
+		     	  <div class="secound single no-padding-top">
+		     	  	  <p class="under-ofwite"><span class="red-text">Suspendisse porttitor felis </span>ac tempus gravida. Donec lacinia leo augue, <span class="red-text">adipiscing dapibus neque consequat ut. Ut et tellus </span> ullamcorper, consectetur tellus eu, dapibus erat.</p>
+
+		     	  	  <p class="under-ofwite"><span class="red-text">Suspendisse porttitor </span> felis ac tempus gravida. Donec <span class="red-text">lacinia </span>leo augue, adipiscing dapibus neque consequat ut. <span class="red-text">Ut et tellus</span> ullamcorper, consectetur tellus eu, dapibus erat.</p>
+
+		     	  	  <p><span class="red-text">Suspendisse porttitor felis</span> ac tempus gravida. Donec lacinia leo augue, <span class="red-text">adipiscing</span> dapibus neque consequat ut. Ut et tellus <span class="red-text">ullamcorper, consectetur</span> tellus eu, dapibus erat.</p>
+		     	  </div>
+
+		     	  <div class="third single no-padding-top">
+		     	  	    <div class="contact">
+			     	  	 <input type="text" class="form-name" placeholder="Enter first name *">
+			     	  	 <input type="text" class="form-email" placeholder="Enter email *">
+			     	  	 <input type="text" class="form-subgect" placeholder="Enter subgect *">
+			     	  	 <textarea name="" class="form-text" placeholder="Enter your request *"></textarea>
+			     	  </div>
+		     	  </div>
+            </div>
+	 		
+ 	</div>
+     	
+
+     <div class="footer-bottom">
+     	<div class="footer-bottom-main container ">
+		     	  <div class="first singles">
+		     	  	  <p>&#169; Suspendisse porttitor felis ac tempus gravida. </p>
+		     	  </div>
+ 
+		     	  <div class="secound singles">
+		     	  	  <ul class="details-footer-main">
+		            	<li class="details-footer right-offwhite">Global _Md 44051</li>
+		            	<li class="details-footer right-offwhite">Blog</li>
+		            	<li class="details-footer">national</li>
+		              </ul>
+		     	  </div>
+
+		     	  <div class="third singles">
+		     	  	    <div id="social-container">
+			     	  	     <!-- Facebook -->
+					        <div class="col-xs-2 icon-xl nopadding" id="FB">
+					          <a class="row" href="#">
+					            <div class="icon facebook eclipse">&#xf09a;</div>
+					          </a>
+					        </div>
+
+					        <!-- Twitter -->
+					        <div class="col-xs-2 icon-xl nopadding" id="TW">
+					          <a class="row" href="#">
+					            <div class="icon twitter eclipse">&#xf099;</div>
+					          </a>
+					        </div>
+
+					        <!-- Google +  -->
+					        <div class="col-xs-2 icon-xl nopadding" id="GO">
+					          <a class="row" href="#">
+					            <div class="icon google eclipse">&#xf0d5;</div>
+					          </a>
+					        </div>
+
+					        <!-- Linkedin -->
+					        <div class="col-xs-2 icon-xl nopadding" id="LI">
+					          <a class="row" href="#">
+					            <div class="icon linkedin eclipse">&#xf0e1;</div>
+					          </a>
+					        </div>
+
+					        <!-- Instagram -->
+					        <div class="col-xs-2 icon-xl nopadding" id="IG">
+					          <a class="row" href="#">
+					            <div class="icon instagram eclipse">&#xf16d;</div>
+					          </a>
+					        </div>
+					    </div>
+		     	  </div>
+            </div>
+     </div>
+
+<script type="text/javascript">
+	/**
+	 * @Titulo: Slider Responsivo
+	 * @Autor: Creaticode
+	 * @URL: http://creaticode.com 
+	 */
+	$(function() {
+		/** -----------------------------------------
+		 * Modulo del Slider 
+		 -------------------------------------------*/
+		 var SliderModule = (function() {
+		 	var pb = {};
+		 	pb.el = $('#slider');
+		 	pb.items = {
+		 		panels: pb.el.find('.slider-wrapper > li'),
+		 	}
+
+		 	// Interval del Slider
+		 	var SliderInterval,
+		 		currentSlider = 0,
+		 		nextSlider = 1,
+		 		lengthSlider = pb.items.panels.length;
+
+		 	// Constructor del Slider
+		 	pb.init = function(settings) {
+		 		this.settings = settings || {duration: 8000};
+		 		var items = this.items,
+		 			lengthPanels = items.panels.length,
+		 			output = '';
+
+		 		// Insertamos nuestros botones
+		 		for(var i = 0; i < lengthPanels; i++) {
+		 			if(i == 0) {
+		 				output += '<li class="active"></li>';
+		 			} else {
+		 				output += '<li></li>';
+		 			}
+		 		}
+
+		 		$('#control-buttons').html(output);
+
+		 		// Activamos nuestro Slider
+		 		activateSlider();
+		 		// Eventos para los controles
+		 		$('#control-buttons').on('click', 'li', function(e) {
+		 			var $this = $(this);
+		 			if(!(currentSlider === $this.index())) {
+		 				changePanel($this.index());
+		 			}
+		 		});
+
+		 	}
+
+		 	// Funcion para activar el Slider
+		 	var activateSlider = function() {
+		 		SliderInterval = setInterval(pb.startSlider, pb.settings.duration);
+		 	}
+
+		 	// Funcion para la Animacion
+		 	pb.startSlider = function() {
+		 		var items = pb.items,
+		 			controls = $('#control-buttons li');
+		 		// Comprobamos si es el ultimo panel para reiniciar el conteo
+		 		if(nextSlider >= lengthSlider) {
+		 			nextSlider = 0;
+		 			currentSlider = lengthSlider-1;
+		 		}
+
+		 		controls.removeClass('active').eq(nextSlider).addClass('active');
+		 		items.panels.eq(currentSlider).fadeOut('slow');
+		 		items.panels.eq(nextSlider).fadeIn('slow');
+
+		 		// Actualizamos los datos del slider
+		 		currentSlider = nextSlider;
+		 		nextSlider += 1;
+		 	}
+
+		 	// Funcion para Cambiar de Panel con Los Controles
+		 	var changePanel = function(id) {
+		 		clearInterval(SliderInterval);
+		 		var items = pb.items,
+		 			controls = $('#control-buttons li');
+		 		// Comprobamos si el ID esta disponible entre los paneles
+		 		if(id >= lengthSlider) {
+		 			id = 0;
+		 		} else if(id < 0) {
+		 			id = lengthSlider-1;
+		 		}
+
+		 		controls.removeClass('active').eq(id).addClass('active');
+		 		items.panels.eq(currentSlider).fadeOut('slow');
+		 		items.panels.eq(id).fadeIn('slow');
+
+		 		// Volvemos a actualizar los datos del slider
+		 		currentSlider = id;
+		 		nextSlider = id+1;
+		 		// Reactivamos nuestro slider
+		 		activateSlider();
+		 	}
+
+			return pb;
+		 }());
+
+		 SliderModule.init({duration: 4000});
+
+	});
+</script>
+</body>
+</html>

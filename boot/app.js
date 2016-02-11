@@ -11,10 +11,6 @@
  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js';
 
 
- // script = document.createElement('script');
- // script.type = 'text/javascript';
- // script.src = 'http://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js';
-
 
  head.appendChild(script);
  head.appendChild(style);   
@@ -35,8 +31,7 @@
      $('head').append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" type="text/css" />');
       // add iconfont
      $('head').append('<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" type="text/css" />');
-     // // add aceEditor
-     // $('head').append('<script src="http://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>');
+    
 
      //disable all link in page
      $('body').on('click.myDisable', function(e) {
@@ -98,14 +93,6 @@
 
      });
 
-
-        
-    //#######################implement ace editor##################
-
-      var editor = ace.edit("editor");
-      editor.setTheme("ace/theme/monokai");
-      editor.getSession().setMode("ace/mode/javascript");
-      document.getElementById('editor').style.fontSize='16px';
 
 
      //#######################left mene events##################
@@ -222,7 +209,7 @@
     }
 
      //*********boxex
-     //size
+     //width
      $("input[type=range]").on('change', function(event) {
 
          rangeVal = $(this).val();
@@ -264,6 +251,18 @@
          log(classWidth);
          
      });
+
+     // height
+     $("#divHight").on('keyup', function(event) {
+
+         divHight = $(this).val();
+
+         $selectedScreen = prop.screenSize;
+   
+         selectedBox.css('height', divHight);
+         
+     });
+
      
      //position
      
@@ -306,12 +305,21 @@
      });
 
      //visabilitty
-     $('.lnr-eye').on('click', function(event) {
+     $('.visabilty').on('click', function(event) {
          
          var divhidden = ('hidden-'+screen.width);
          selectedBox.addClass(divhidden);
          log(divhidden);
 
+     });
+
+     //editor hide and show
+     $('.editorHide').on('click', function(event) {   
+         selectedBox.hide();
+     });
+
+     $('.editorShow').on('click', function(event) {   
+         selectedBox.show();
      });
 
 
