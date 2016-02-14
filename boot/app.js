@@ -105,10 +105,30 @@
 
      // screen size
      // 
+
+     function screenSize(widthChange , imageUrl){
+        
+        $body.css({
+            "background":imageUrl,
+            "background-position":" 50% 0",
+            'overflow-y': 'scroll'
+
+         });
+
+        $bodyB.css({
+            "width": widthChange,
+            "margin": "40px auto",
+            'height': '600px',
+            'overflow-y': 'scroll'
+         });
+     }
+
      $body = $('html');
+     $bodyB = $('body');
      $('.cXs').click(function() {
          $('.menuLi').find('.active').removeClass('active');
-         $body.css('width', '320px');
+         imageUrl = "url('http://localhost/editor/boot/images/phone.png') no-repeat right top";
+         screenSize('320px' , imageUrl)
          $(this).addClass('active');
 
 
@@ -124,7 +144,8 @@
 
      $('.cS').click(function() {
          $('.menuLi').find('.active').removeClass('active');
-         $body.css('width', '768px');
+         imageUrl = "url('http://localhost/editor/boot/images/ipad.png') no-repeat right top";
+         screenSize('768px' , imageUrl);
          $(this).addClass('active');
 
          window.resizeTo(768,30);     
@@ -147,7 +168,7 @@
 
      $('.cM').click(function() {
          $('.menuLi').find('.active').removeClass('active');
-         $body.css('width', '992px');
+         screenSize('992px');
          $(this).addClass('active');
 
          //set selected screen
@@ -165,7 +186,7 @@
 
      $('.cL').click(function() {
          $('.menuLi').find('.active').removeClass('active');
-         $body.css('width', '100%');
+         screenSize('100%')
          $(this).addClass('active');
 
          //set selected screen

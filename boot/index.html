@@ -444,6 +444,49 @@ width: 55px !important;
     margin-top: 10px;
 }
 
+.dubble {
+    height: 70px!important;
+}
+
+.keys {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  line-height: 8rem;
+  height: 16rem;
+}
+
+.keys div {
+  font-size: 2.4rem;
+  display: inline-block;
+  padding: 1rem;
+  margin: 0 0.5rem;
+  height: 4rem;
+  width: 4rem;
+  line-height: 3.6rem;
+  text-align: center;
+  vertical-align: bottom;
+  color: white;
+  border-style: solid;
+  border-width: 0.4rem 0.45rem 0.6rem;
+  border-radius: 0.8rem;
+  border-color: #99e6bd #64b98c #64b98c #74d2a0;
+  background: #7de3ad;
+  -moz-transition: all 80ms ease;
+  -o-transition: all 80ms ease;
+  -webkit-transition: all 80ms ease;
+  transition: all 80ms ease;
+}
+
+.keys .pressed {
+  border-bottom-width: 0.4rem;
+  text-shadow: 0 0 10px white;
+}
+
  </style>
 
 </head>
@@ -457,37 +500,7 @@ width: 55px !important;
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
+ 
     <!-- Image Background Page Header -->
     <!-- Note: The background image is set within the business-casual.css file. -->
     <div id="pageHeader" class="business-header">
@@ -655,7 +668,7 @@ width: 55px !important;
                         <a href="#" class="menuLi">
 
                             <div class="col-sm-3">
-                                Position
+                                location
                             </div>
 
                                      
@@ -665,8 +678,63 @@ width: 55px !important;
                                     <div class="col-sm-2 menuLiPos posCharRight">R</div>
             
                         </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="menuLi">
+
+                            <div class="col-sm-3">
+                                Position
+                            </div>
+                            
+
+                            <section class="col-sm-9">
+
+                                      <div class="dropdown dropdown-dark">
+                                        <select name="two" class="dropdown-select dropdown-dark fontSize">
+                                            <option value="">Display</option>  
+                                            <option value="8">absolute</option>            
+                                            <option value="9">fixed</option>
+                                        </select>
+                                      </div>
+                            </section>
+                        </a>
                     </li> 
 
+                    <li>
+                        <a href="#" class="menuLi dubble">
+
+                            <div class="col-sm-6">
+                                margin
+                            </div>
+
+                            <div class="col-sm-6">
+                                 <div class="keys">
+                                    <div class="up">
+                                      ↑
+                                    </div>
+                                    <br />
+                                    <div class="left">
+                                      ←
+                                    </div>
+                                    <div class="down">
+                                      ↓
+                                    </div>
+                                    <div class="right">
+                                      →
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li> 
+
+                  </ul>
+                </li>
+
+                <li class="child-menu">
+                  <a href="#" class=""><span class="lnr lnr-laptop-phone"></span><span>Visability</span> <span class="lnr lnr-chevron-right toggle-right"></span>
+                  </a>
+                  <ul class="child-menu-ul">
                     <li>
                         <a href="#" class="menuLi">
 
@@ -693,11 +761,8 @@ width: 55px !important;
                             </div>
                         </a>
                     </li> 
-
                   </ul>
                 </li>
-
-                
 
                 <li class="child-menu">
                   <a href="#" class=""><span class="lnr lnr-picture"></span><span>Images</span> <span class="lnr lnr-chevron-right toggle-right"></span>
@@ -803,35 +868,7 @@ width: 55px !important;
                   <a href="#" class=""><span class="lnr lnr-question-circle"></span><span>Info</span></a>
                 </li>
            
-                 <li class="child-menu">
-                  <a href="#" class=""><span class="lnr lnr-picture"></span><span>Code</span> <span class="lnr lnr-chevron-right toggle-right"></span>
-                  </a>
-                  <ul class="child-menu-ul">
-                    <li>
-                        <a href="#" class="menuLi">
-
-                            <div class="col-sm-3">
-                                Size
-                            </div>
-
-                            <div class="col-sm-9">
-                                <div class="title">
-                                  <h2>
-                                    Embedding Ace in Your Site
-                                    link <a href="http://ace.c9.io/#nav=about"> link</a>
-                                  </h2>
-                                </div>
-
-                                <div id="editor">
-                                  function foo(items) {
-                                    var x = "All this is syntax highlighted";
-                                    return x;
-                                }
-                                </div>
-                            </div>
-                        </a>
-                    </li> 
-
+                
                   </ul>
                 </li>
               </ul>
